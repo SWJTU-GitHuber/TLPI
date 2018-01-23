@@ -1,7 +1,8 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <ctype.h>
-#include "tlpi_hdr.h"
+#include "../lib/tlpi_hdr.h"
+#include "../lib/get_num.h"
 
 int main(int argc, char *argv[])
 {
@@ -62,9 +63,10 @@ int main(int argc, char *argv[])
 
         case 's':
             offset = getLong(&argv[ap][1], GN_ANY_BASE, argv[ap]);
-            if (lseek(fd, offset, SEEK_SET) == -1)
+            off_t curOff = lseek(fd, offset, SEEK_SET);
+            if (curOff == -1)
                 errExit("lseek");
-            printf("%s: seek successed\n", argv[ap]);
+            printf("%s: seek successed, curOff: %d\n", argv[ap],(int)curOff);
             break;
 
         default:
