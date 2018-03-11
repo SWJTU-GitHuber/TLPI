@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
             off_t curOff = lseek(fd, offset, SEEK_SET);
             if (curOff == -1)
                 errExit("lseek");
-            printf("%s: seek successed, curOff: %d\n", argv[ap],(int)curOff);
+            printf("%s: seek successed, curOff: %d\n", argv[ap], (int)curOff);
             break;
 
         default:

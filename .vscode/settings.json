@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "tlpi_hdr.h": "c",
-        "get_num.h": "c"
+        "get_num.h": "c",
+        "uio.h": "c",
+        "stat.h": "c"
     }
 }
