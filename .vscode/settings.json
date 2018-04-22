@@ -4,6 +4,7 @@
         "get_num.h": "c",
         "uio.h": "c",
         "stat.h": "c",
-        "print_wait_status.h": "c"
+        "print_wait_status.h": "c",
+        "pthread.h": "c"
     }
 }
